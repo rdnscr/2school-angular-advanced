@@ -11,7 +11,7 @@ import { MdSnackBar } from '@angular/material';
     templateUrl: './todo.component.html',
 })
 export class TodoComponent implements OnInit, OnDestroy {
-    private todos: TodoItem[];
+    public todos: TodoItem[];
     private orig: TodoItem[];
 
     constructor(private todoService: TodoService, private snackBar: MdSnackBar) {
