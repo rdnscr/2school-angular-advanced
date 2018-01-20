@@ -11,14 +11,15 @@ import { stateToken } from './state';
  */
 @Component({
   selector: 'app',
-  styles: [ 'h1 { color: #00BCD4; }' ],
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public name = 'Angular 2 Webpack Starter';
+  public name = '2BIT Angular Demos';
   public navItems: Route[];
 
-  constructor(@Inject(stateToken) public state: ReplaySubject<PlaygroundState>) {
+  constructor( @Inject(stateToken) public state: ReplaySubject<PlaygroundState>) {
     this.navItems = ROUTES.filter((route) => route.data);
   }
 

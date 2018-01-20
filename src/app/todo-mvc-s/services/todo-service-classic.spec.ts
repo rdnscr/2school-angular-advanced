@@ -1,7 +1,6 @@
 import { async, inject, TestBed } from '@angular/core/testing';
 import { Http, HttpModule, Response, ResponseOptions, XHRBackend } from '@angular/http';
 import { MockBackend, MockConnection } from '@angular/http/testing';
-import { POINT_CONVERSION_COMPRESSED } from 'constants';
 import { Observable } from 'rxjs/Observable';
 import { Observer } from 'rxjs/Observer';
 import 'rxjs/add/observable/of';

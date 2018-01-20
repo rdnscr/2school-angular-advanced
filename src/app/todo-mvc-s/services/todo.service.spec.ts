@@ -48,7 +48,7 @@ describe('Http-TodoService (mockBackend)', () => {
 
     it('can instantiate service with "new"', inject([Http], (http: Http) => {
         expect(http).not.toBeNull('http should be provided');
-        let service = new TodoService(http);
+        const service = new TodoService(http);
         expect(service instanceof TodoService).toBe(true, 'new service should be ok');
     }));
 
@@ -67,7 +67,7 @@ describe('Http-TodoService (mockBackend)', () => {
             backend = be;
             service = new TodoService(http);
             fakeTodos = makeTodoData();
-            let options = new ResponseOptions({ status: 200, body: { data: fakeTodos } });
+            const options = new ResponseOptions({ status: 200, body: { data: fakeTodos } });
             response = new Response(options);
         }));
 
@@ -94,7 +94,7 @@ describe('Http-TodoService (mockBackend)', () => {
         })));
 
         it('should be OK returning no todos', async(inject([], () => {
-            let resp = new Response(new ResponseOptions({ status: 200, body: { data: [] } }));
+            const resp = new Response(new ResponseOptions({ status: 200, body: { data: [] } }));
             backend.connections.subscribe((c: MockConnection) => c.mockRespond(resp));
 
             service.load()
@@ -105,7 +105,7 @@ describe('Http-TodoService (mockBackend)', () => {
         })));
 
         it('should treat 404 as an Observable error', async(inject([], () => {
-            let resp = new Response(new ResponseOptions({ status: 404 }));
+            const resp = new Response(new ResponseOptions({ status: 404 }));
             backend.connections.subscribe((c: MockConnection) => c.mockRespond(resp));
 
             service.load()
