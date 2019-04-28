@@ -2,7 +2,7 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {    
+  "projects": {
     "todo-mvc-s": {
       "root": "projects/todo-mvc-s/",
       "sourceRoot": "projects/todo-mvc-s/src",
@@ -20,7 +20,8 @@
             "tsConfig": "projects/todo-mvc-s/tsconfig.app.json",
             "assets": [
               "projects/todo-mvc-s/src/favicon.png",
-              "projects/todo-mvc-s/src/assets"
+              "projects/todo-mvc-s/src/assets",
+              "projects/todo-mvc-s/src/manifest.json"
             ],
             "styles": [
               "projects/todo-mvc-s/src/styles.scss"
@@ -35,15 +36,17 @@
                   "with": "projects/todo-mvc-s/src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": true,
+              "optimization": false,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
+              "extractCss": false,
               "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
+              "aot": false,
+              "extractLicenses": false,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": false,
+              "serviceWorker": true,
+              "ngswConfigPath": "projects/todo-mvc-s/ngsw-config.json"
             }
           }
         },
@@ -77,7 +80,8 @@
             "scripts": [],
             "assets": [
               "projects/todo-mvc-s/src/favicon.png",
-              "projects/todo-mvc-s/src/assets"
+              "projects/todo-mvc-s/src/assets",
+              "projects/todo-mvc-s/src/manifest.json"
             ]
           }
         },
