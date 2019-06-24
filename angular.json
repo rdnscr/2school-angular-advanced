@@ -20,8 +20,7 @@
             "tsConfig": "projects/todo-mvc-s/tsconfig.app.json",
             "assets": [
               "projects/todo-mvc-s/src/favicon.png",
-              "projects/todo-mvc-s/src/assets",
-              "projects/todo-mvc-s/src/manifest.json"
+              "projects/todo-mvc-s/src/assets"
             ],
             "styles": [
               "projects/todo-mvc-s/src/styles.scss"
@@ -36,17 +35,15 @@
                   "with": "projects/todo-mvc-s/src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": false,
+              "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": false,
+              "extractCss": true,
               "namedChunks": false,
-              "aot": false,
-              "extractLicenses": false,
+              "aot": true,
+              "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": false,
-              "serviceWorker": true,
-              "ngswConfigPath": "projects/todo-mvc-s/ngsw-config.json"
+              "buildOptimizer": true
             }
           }
         },
@@ -80,8 +77,7 @@
             "scripts": [],
             "assets": [
               "projects/todo-mvc-s/src/favicon.png",
-              "projects/todo-mvc-s/src/assets",
-              "projects/todo-mvc-s/src/manifest.json"
+              "projects/todo-mvc-s/src/assets"
             ]
           }
         },
@@ -122,5 +118,5 @@
       }
     }
   },
-  "defaultProject": "todo-mvc-s"
+  "defaultProject": "todo-single-component"
 }
