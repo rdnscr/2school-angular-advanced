@@ -23,6 +23,6 @@ export class TodoListComponent {
     public onChecked(checked: boolean, item: TodoItem) {
         item.checked = checked;
         item.lastModified = new Date();
-        this.snackBar.open('checked / unchecked item', null, { duration: 1500 });
+        this.snackBar.open('checked / unchecked item', undefined, { duration: 1500 });
     }
 }

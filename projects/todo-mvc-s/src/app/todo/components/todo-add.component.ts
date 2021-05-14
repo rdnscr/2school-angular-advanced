@@ -19,6 +19,6 @@ export class TodoAddComponent {
     public onAdd(newItemDescription: string) {
         this.add.emit({ description: newItemDescription, checked: false, lastModified: new Date(), id: 0 });
         this.descriptionInput.nativeElement.value = '';
-        this.snackBar.open(`Item with description "${newItemDescription} added`, null, { duration: 1500 });
+        this.snackBar.open(`Item with description "${newItemDescription} added`, undefined, { duration: 1500 });
     }
 }
