@@ -8,13 +8,13 @@ import { TodoItem } from '../../shared';
 })
 export class TodoListComponent {
     @Input()
-    public items: TodoItem[];
+    public items: TodoItem[] | undefined;
     @Input()
     public hasReset: boolean;
     @Input()
     public title: string;
     @Output()
-    public reset = new EventEmitter<void>();
+    public resetAll = new EventEmitter<void>();
 
     constructor(private snackBar: MatSnackBar) {
 

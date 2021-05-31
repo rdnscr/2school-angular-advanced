@@ -88,14 +88,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/todo-mvc-s/tsconfig.app.json",
-              "projects/todo-mvc-s/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/todo-mvc-s//**/*.ts",
+              "projects/todo-mvc-s//**/*.html"
             ]
           }
         }
@@ -113,11 +110,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": "projects/todo-mvc-s-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/todo-mvc-s-e2e//**/*.ts",
+              "projects/todo-mvc-s-e2e//**/*.html"
             ]
           }
         }
@@ -126,6 +123,7 @@
   },
   "defaultProject": "todo-single-component",
   "cli": {
-    "analytics": "2f72919b-0952-4ab1-aa71-0b6558dad329"
+    "analytics": "2f72919b-0952-4ab1-aa71-0b6558dad329",
+    "defaultCollection": "@angular-eslint/schematics"
   }
 }
