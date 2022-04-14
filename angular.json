@@ -97,28 +97,6 @@
           }
         }
       }
-    },
-    "todo-mvc-s-e2e": {
-      "root": "projects/todo-mvc-s-e2e/",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "projects/todo-mvc-s-e2e/protractor.conf.js",
-            "devServerTarget": "todo-mvc-s:serve"
-          }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "projects/todo-mvc-s-e2e//**/*.ts",
-              "projects/todo-mvc-s-e2e//**/*.html"
-            ]
-          }
-        }
-      }
     }
   },
   "defaultProject": "todo-single-component",
