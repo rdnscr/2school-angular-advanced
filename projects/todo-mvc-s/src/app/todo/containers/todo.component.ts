@@ -1,19 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TodoItem } from '../../shared';
-import { TodoService } from '../services/todo.service';
+import { TodoService } from "../services/todo.service";
 
 @Component({
     selector: 'todo-page',
     templateUrl: './todo.component.html',
 })
 export class TodoComponent implements OnInit {
-    constructor(private todoService: TodoService, private snackBar: MatSnackBar) {
+    constructor(private todoService: TodoService,
+      private snackBar: MatSnackBar) {
 
     }
 
     public get todos(): TodoItem[] {
-        return this.todoService.todos;
+      return this.todoService.todos;
     }
 
     public ngOnInit() {
@@ -22,11 +23,10 @@ export class TodoComponent implements OnInit {
 
     public onAdd(newItem: TodoItem): void {
         this.todoService.add(newItem);
-        this.snackBar.open('add item', undefined, { duration: 1500 });
     }
 
     public onReset(): void {
-        this.todoService.reset();
+        // this.todoService.reset();
         this.snackBar.open('reset todos', undefined, { duration: 1500 });
     }
 }

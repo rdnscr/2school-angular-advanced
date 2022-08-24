@@ -14,14 +14,12 @@ import { TodoItemComponent } from './components/todo-item.component';
 import { TodoListComponent } from './components/todo-list.component';
 import { TodoViewComponent } from './components/todo-view.component';
 import { TodoComponent } from './containers/todo.component';
-import { TodoService } from './services/todo.service';
 import { todoRoutesModule } from './todo.routes';
 
 @NgModule({
     imports: [CommonModule, FormsModule, ReactiveFormsModule, MatButtonModule, MatInputModule, MatSnackBarModule, MatCardModule,
         MatCheckboxModule, MatListModule, HttpClientModule, FlexLayoutModule, todoRoutesModule],
-    declarations: [TodoAddComponent, TodoComponent, TodoListComponent, TodoViewComponent, TodoItemComponent],
-    providers: [TodoService]
+    declarations: [TodoAddComponent, TodoComponent, TodoListComponent, TodoViewComponent, TodoItemComponent]
 })
 export class TodoMvcPlusServiceModule {
 
