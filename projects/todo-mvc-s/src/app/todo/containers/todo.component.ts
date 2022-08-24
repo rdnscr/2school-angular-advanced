@@ -26,7 +26,7 @@ export class TodoComponent implements OnInit {
     }
 
     public onReset(): void {
-        // this.todoService.reset();
+        this.todoService.reset();
         this.snackBar.open('reset todos', undefined, { duration: 1500 });
     }
 }
