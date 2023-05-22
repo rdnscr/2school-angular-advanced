@@ -25,11 +25,10 @@ import { environment } from '../environments/environment';
     MatSidenavModule,
     MatToolbarModule,
     RouterModule.forRoot(appRoutes, {
-      useHash: false,
-      preloadingStrategy: NoPreloading,
-      enableTracing: !environment.production,
-      relativeLinkResolution: 'legacy'
-    })],
+    useHash: false,
+    preloadingStrategy: NoPreloading,
+    enableTracing: !environment.production
+})],
 })
 export class AppModule {
 
